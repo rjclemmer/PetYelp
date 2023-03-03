@@ -1,5 +1,5 @@
 const sequelize = require('../config/config');
-const { User, Pet } = require('../models');
+const { Pet } = require('../models');
 
 // const userData = require('./userData.json');
 const petData = require('./petData.json');
@@ -12,7 +12,7 @@ const seedDatabase = async () => {
     returning: true,
   });
 
-  for (const project of petData) {
+  for (const pet of petData) {
     await Pet.create({
       ...pet,
       user_id: users[Math.floor(Math.random() * users.length)].id,

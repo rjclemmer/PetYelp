@@ -1,4 +1,4 @@
-const { Model, DataTypes } = require('sequelize/types');
+const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/config');
 
 class Pet extends Model {}
@@ -20,6 +20,10 @@ Pet.init(
         allowNull: false,
     },
   },
+  {
+    sequelize,
+    modelName: 'pet',
+  }
 );
 
 module.exports = Pet;
