@@ -1,6 +1,4 @@
-const { Pet } = require('../models');
-
-const petdata = [
+[
   {
     "petName": "Herbie",
     "filename": "01-pug-wearing-glasses.jpg"
@@ -41,8 +39,4 @@ const petdata = [
     "petName": "Charlotte",
     "filename": "10-running-weimaraner.jpg"
   }
-];
-
-const seedPets = () => Pet.bulkCreate(petdata);
-
-module.exports = seedPets;
+]

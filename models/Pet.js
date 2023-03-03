@@ -1,8 +1,9 @@
-const { DataTypes } = require('sequelize/types');
-const { Pet } = require('../models');
+const { Model, DataTypes } = require('sequelize/types');
 const sequelize = require('../config/config');
 
-const petdata = [
+class Pet extends Model {}
+
+Pet.init(
   {
     id: {
         type: DataTypes.INTEGER,
@@ -19,9 +20,6 @@ const petdata = [
         allowNull: false,
     },
   },
+);
 
-];
-
-const seedPet = () => Pet.bulkCreate(petdata);
-
-module.exports = seedPet;
+module.exports = Pet;
