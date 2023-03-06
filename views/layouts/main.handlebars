@@ -1,33 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Tech Blog</title>
-  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css">
+  <title>Precious Pets</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rampart+One&family=Shantell+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body class="flex-column min-100-vh">
   <nav class="navbar">
     <ul>
       <li class="li-inline nav-item"><a href="/">Home</a></li>
-      <li class="li-inline nav-item"><a href="/dashboard">Dashboard</a></li>
+      <li class="li-inline nav-item"><a href="/dashboard">Precious Pets</a></li>
       <li class="li-inline nav-item"><a href="/login">Login</a></li>
       <li class="li-inline nav-item"><a href="#" id="logout-link">Logout</a></li>
     </ul>
   </nav>
   <header class="hero">
-    <h1 class="app-title"><a href="/">The Tech Blog</a></h1>
+    <h1 class="app-title"><a href="/">Precious Pets</a></h1>
   </header>
 
   <main class="col-auto">
+    <!-- Loop over each object in the pets array -->
+<div>
+  <div>
+  {{#each imageList}}
+    <h2>{{this.name}}</h2>
+    <img src="{{this.src}}"/>
+  {{/each}}
+  </div>
+</div>
     {{{body}}}
   </main>
 
   <footer class="flex-row justify-center">
-    &copy; The Tech Blog Folks
+    &copy; Precious Pets
   </footer>
 </body>
 

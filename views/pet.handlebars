@@ -1,0 +1,8 @@
+<!-- Loop over each object in the pets array -->
+<div class="pets">
+  <h1>Precious Pets</h1>
+  {{#each imageList}}
+    <h1>{{this.name}}</h1>
+    <img src="{{this.src}}"/>
+  {{/each}}
+</div>
