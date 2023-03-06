@@ -1,42 +1,42 @@
 [
   {
     "petName": "Herbie",
-    "filename": "01-pug-wearing-glasses.jpg"
+    "filename": "../public/images/01-pug-wearing-glasses.jpg"
   },
   {
     "petName": "Chipper",
-    "filename": "02-grumpy-cat.jpg"
+    "filename": "../public/images/02-grumpy-cat.jpg"
   },
   {
     "petName": "Chicken",
-    "filename": "03-hairless-cat.jpg"
+    "filename": "../public/images/03-hairless-cat.jpg"
   },
   {
     "petName": "Mittens",
-    "filename": "04-cozy-cat-in-blanket.jpg"
+    "filename": "../public/images/04-cozy-cat-in-blanket.jpg"
   },
   {
     "petName": "Cozmo",
-    "filename": "05-backpack-cat.jpg"
+    "filename": "../public/images/05-backpack-cat.jpg"
   },
   {
     "petName": "Shreddder",
-    "filename": "06-long-haired-chihuahua.jpg"
+    "filename": "../public/images/06-long-haired-chihuahua.jpg"
   },
   {
     "petName": "Frank",
-    "filename": "07-smiley-cat.jpg"
+    "filename": "../public/images/07-smiley-cat.jpg"
   },
   {
     "petName": "Snickers",
-    "filename": "08-expressive-pug.jpg"
+    "filename": "../public/images/08-expressive-pug.jpg"
   },
   {
     "petName": "Violette",
-    "filename": "09-side-eye-frenchie.jpg"
+    "filename": "../public/images/09-side-eye-frenchie.jpg"
   },
   {
     "petName": "Charlotte",
-    "filename": "10-running-weimaraner.jpg"
+    "filename": "../public/images/10-running-weimaraner.jpg"
   }
 ]

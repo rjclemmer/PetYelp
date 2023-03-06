@@ -5,12 +5,6 @@ class Pet extends Model {}
 
 Pet.init(
   {
-    id: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        primaryKey: true,
-        autoIncrement: true,
-    },
     petName: {
         type: DataTypes.STRING,
         allowNull: false,

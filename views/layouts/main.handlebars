@@ -5,24 +5,35 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Precious Pets</title>
-  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rampart+One&family=Shantell+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body class="flex-column min-100-vh">
   <nav class="navbar">
     <ul>
       <li class="li-inline nav-item"><a href="/">Home</a></li>
-      <li class="li-inline nav-item"><a href="/dashboard">Captions</a></li>
+      <li class="li-inline nav-item"><a href="/dashboard">Precious Pets</a></li>
       <li class="li-inline nav-item"><a href="/login">Login</a></li>
       <li class="li-inline nav-item"><a href="#" id="logout-link">Logout</a></li>
     </ul>
   </nav>
   <header class="hero">
-    <h1 class="app-title"><a href="/">All the Precious Pets</a></h1>
+    <h1 class="app-title"><a href="/">Precious Pets</a></h1>
   </header>
 
   <main class="col-auto">
+    <!-- Loop over each object in the pets array -->
+<div>
+  <div class="col-auto">
+  {{#each imageList}}
+    <h2>{{this.name}}</h2>
+    <img src="{{this.src}}"/>
+  {{/each}}
+  </div>
+</div>
     {{{body}}}
   </main>
 
