@@ -28,10 +28,10 @@
     <!-- Loop over each object in the pets array -->
 <div>
   <div>
-  {{#each imageList}}
-    <h2>{{name}}</h2>
-    <img src="{{src}}"/>
-  {{/each}}
+    {{#each imageList as |image|}}
+      <h2>{{image.name}}</h2>
+      <img width="200" src="{{image.src}}" />
+    {{/each}}
   </div>
 </div>
     {{{body}}}

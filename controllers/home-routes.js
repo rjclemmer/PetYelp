@@ -2,40 +2,69 @@ const router = require("express").Router();
 const { Post, Comment, User, Pet } = require("../models/");
 
 // get petData for homepage
-// const petData = () => Pet;
-// router.get("../models/Pet.js", (req, res) => {
-//   try {
-//     const petData = Pet.findAll();
+const petData = () => Pet;
+router.get("../models/Pet.js", (req, res) => {
+  try {
+    const petData = Pet.findAll();
 
-//     const pet = petData.map((pet) => pet.get({ plain: true }));
+    const pet = petData.map((pet) => pet.get({ plain: true }));
 
-//     res.render("/", {
-//       layout: "./../views/pet.handlebars",
-//       // pet: "../views/pet.handlebars",
-//       filename: "../views/pet.handlebars",
-//     });
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
+    res.render("/", {
+      layout: "./../views/pet.handlebars",
+      // pet: "../views/pet.handlebars",
+      filename: "../views/pet.handlebars",
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 // route to display dynamic src images
-router.get('/public', (req,res) => {
-  imageList = []
+router.get('/', (req,res) => {
+  imageList = [];
 
-  imageList.push({src: '/public/images/01-pug-wearing-glasses.jpg', name: 'Herbie'})
-  imageList.push({src: '/public/images/02-grumpy-cat.jpg', name: 'Chipper'})
-  imageList.push({src: '/public/images/03-hairless-cat.jpg', name: 'Chicken'})
-  imageList.push({src: '/public/images/04-cozy-cat-in-blanket.jpg', name: 'Mittens'})
-  imageList.push({src: '/public/images/05-backpack-cat.jpg', name: 'Cozmo'})
-  imageList.push({src: '/public/images/06-long-haired-chihuahua.jpg', name: 'Shredder'})
-  imageList.push({src: '/public/images/07-smiley-cat.jpg', name: 'Frank'})
-  imageList.push({src: '/public/images/08-expressive-pug.jpg', name: 'Snickers'})
-  imageList.push({src: '/public/images/09-side-eye-frenchie.jpg', name: 'Violette'})
-  imageList.push({src: '/public/images/10-running-weimaraner.jpg', name: 'Charlotte'})
+  imageList.push({
+    src: '/images/01-pug-wearing-glasses.jpg',
+    name: 'Herbie'
+  })
+  imageList.push({
+    src: '/images/02-grumpy-cat.jpg',
+    name: 'Chipper'
+  })
+  imageList.push({
+    src: '/images/03-hairless-cat.jpg',
+    name: 'Chicken'
+  })
+  imageList.push({
+    src: '/images/04-cozy-cat-in-blanket.jpg',
+    name: 'Mittens'
+  })
+  imageList.push({
+    src: '/images/05-backpack-cat.jpg',
+    name: 'Cozmo'
+  })
+  imageList.push({
+    src: '/images/06-long-haired-chihuahua.jpg',
+    name: 'Shredder'
+  })
+  imageList.push({
+    src: '/images/07-smiley-cat.jpg',
+    name: 'Frank'
+  })
+  imageList.push({
+    src: '/images/08-expressive-pug.jpg',
+    name: 'Snickers'
+  })
+  imageList.push({
+    src: '/images/09-side-eye-frenchie.jpg',
+    name: 'Violette'
+  })
+  imageList.push({
+    src: '/images/10-running-weimaraner.jpg',
+    name: 'Charlotte'
+  });
 
-  res.render('../views/layouts/main.handlebars', { imageList: imageList });
-
+  res.render("login", { imageList });
 });
 
 // get all posts for homepage
