@@ -19,6 +19,25 @@ const { Post, Comment, User, Pet } = require("../models/");
 //   }
 // });
 
+// route to display dynamic src images
+router.get('/public', (req,res) => {
+  imageList = []
+
+  imageList.push({src: '/public/images/01-pug-wearing-glasses.jpg', name: 'Herbie'})
+  imageList.push({src: '/public/images/02-grumpy-cat.jpg', name: 'Chipper'})
+  imageList.push({src: '/public/images/03-hairless-cat.jpg', name: 'Chicken'})
+  imageList.push({src: '/public/images/04-cozy-cat-in-blanket.jpg', name: 'Mittens'})
+  imageList.push({src: '/public/images/05-backpack-cat.jpg', name: 'Cozmo'})
+  imageList.push({src: '/public/images/06-long-haired-chihuahua.jpg', name: 'Shredder'})
+  imageList.push({src: '/public/images/07-smiley-cat.jpg', name: 'Frank'})
+  imageList.push({src: '/public/images/08-expressive-pug.jpg', name: 'Snickers'})
+  imageList.push({src: '/public/images/09-side-eye-frenchie.jpg', name: 'Violette'})
+  imageList.push({src: '/public/images/10-running-weimaraner.jpg', name: 'Charlotte'})
+
+  res.render('../views/layouts/main.handlebars', { imageList: imageList });
+
+});
+
 // get all posts for homepage
 router.get("/", async (req, res) => {
   try {
