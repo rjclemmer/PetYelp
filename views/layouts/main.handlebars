@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Rampart+One&family=Shantell+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 <link rel="stylesheet" href="/css/style.css">
 </head>
 
@@ -24,18 +25,28 @@
     <h1 class="app-title"><a href="/">Precious Pets</a></h1>
   </header>
 
-  <main class="col-auto">
-    <!-- Loop over each object in the pets array -->
-<div>
-  <div>
-    {{#each imageList as |image|}}
-      <h2>{{image.name}}</h2>
-      <img width="200" src="{{image.src}}" />
-    {{/each}}
+<main class="col-auto">
+  <div class="container is-centered">
+    <div class="columns is-multiline">
+      {{#each imageList as |image|}}
+        <div class="column is-one-quarter">
+         <a href="/post/{{image.id}}"></a>
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src="{{image.src}}" alt="{{image.name}}">
+              </figure>
+            </div>
+            <div class="card-content">
+              <p class="title is-4">{{image.name}}</p>
+            </div>
+          </div>
+        </div>
+      {{/each}}
+    </div>
   </div>
-</div>
-    {{{body}}}
-  </main>
+  {{{body}}}
+</main>
 
   <footer class="flex-row justify-center">
     &copy; Precious Pets

@@ -13,6 +13,12 @@ Pet.init(
         type: DataTypes.STRING,
         allowNull: false,
     },
+    id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      allowNull: false,
+      autoIncrement: true
+    },
   },
   {
     sequelize,
