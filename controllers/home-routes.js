@@ -1,23 +1,23 @@
 const router = require("express").Router();
 const { Post, Comment, User, Pet } = require("../models/");
 
-// get petData for homepage
-const petData = () => Pet;
-router.get("../models/Pet.js", (req, res) => {
-  try {
-    const petData = Pet.findAll();
+// // get petData for homepage
+// const petData = () => Pet;
+// router.get("../models/Pet.js", (req, res) => {
+//   try {
+//     const petData = Pet.findAll();
 
-    const pet = petData.map((pet) => pet.get({ plain: true }));
+//     const pet = petData.map((pet) => pet.get({ plain: true }));
 
-    res.render("/", {
-      layout: "./../views/pet.handlebars",
-      // pet: "../views/pet.handlebars",
-      filename: "../views/pet.handlebars",
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
+//     res.render("/", {
+//       layout: "./../views/pet.handlebars",
+//       // pet: "../views/pet.handlebars",
+//       filename: "../views/pet.handlebars",
+//     });
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
 
 // route to display dynamic src images
 router.get('/', (req,res) => {
