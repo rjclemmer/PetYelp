@@ -25,53 +25,43 @@ router.get('/', (req,res) => {
 
   imageList.push({
     src: '/images/01-pug-wearing-glasses.jpg',
-    name: 'Herbie',
-    id: 1
+    name: 'Herbie'
   })
   imageList.push({
     src: '/images/02-grumpy-cat.jpg',
-    name: 'Chipper',
-    id: 2
+    name: 'Chipper'
   })
   imageList.push({
     src: '/images/03-hairless-cat.jpg',
-    name: 'Chicken',
-    id: 3
+    name: 'Chicken'
   })
   imageList.push({
     src: '/images/04-cozy-cat-in-blanket.jpg',
-    name: 'Mittens',
-    id: 4
+    name: 'Mittens'
   })
   imageList.push({
     src: '/images/05-backpack-cat.jpg',
-    name: 'Cozmo',
-    id: 5
+    name: 'Cozmo'
   })
   imageList.push({
     src: '/images/06-long-haired-chihuahua.jpg',
-    name: 'Shredder',
-    id: 6
+    name: 'Shredder'
   })
   imageList.push({
     src: '/images/07-smiley-cat.jpg',
-    name: 'Frank',
-    id: 7
+    name: 'Frank'
   })
   imageList.push({
     src: '/images/08-expressive-pug.jpg',
-    name: 'Snickers',
-    id: 8
+    name: 'Snickers'
   })
   imageList.push({
     src: '/images/09-side-eye-frenchie.jpg',
-    name: 'Violette',
-    id: 9
+    name: 'Violette'
   })
   imageList.push({
     src: '/images/10-running-weimaraner.jpg',
-    name: 'Charlotte',
-    id: 10
+    name: 'Charlotte'
   });
 
   res.render("login", { imageList });
