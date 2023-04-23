@@ -1,8 +1,12 @@
-{{!-- <!-- Loop over each object in the pets array -->
 <div class="pets">
-  <h1>Precious Pets</h1>
-  {{#each imageList}}
-    <h1>{{this.name}}</h1>
-    <img src="{{this.src}}"/>
-  {{/each}}
-</div> --}}
+  <h1 class="title has-text-centered">Precious Pets</h1>
+  
+  <div class="columns is-centered">
+    <div class="column is-half">
+      <h1 class="subtitle">{{pet.petName}}</h1>
+      <figure class="image is-4by3">
+        <img src="/{{pet.filename}}" alt="{{pet.petName}}"/>
+      </figure>
+    </div>
+  </div>
+</div>

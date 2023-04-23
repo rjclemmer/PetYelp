@@ -25,43 +25,54 @@ router.get('/', (req,res) => {
 
   imageList.push({
     src: '/images/01-pug-wearing-glasses.jpg',
-    name: 'Herbie'
+    name: 'Herbie',
+    id: 1
   })
   imageList.push({
     src: '/images/02-grumpy-cat.jpg',
-    name: 'Chipper'
+    name: 'Chipper',
+    id: 2
+
   })
   imageList.push({
     src: '/images/03-hairless-cat.jpg',
-    name: 'Chicken'
+    name: 'Chicken',
+    id: 3
   })
   imageList.push({
     src: '/images/04-cozy-cat-in-blanket.jpg',
-    name: 'Mittens'
+    name: 'Mittens',
+    id: 4
   })
   imageList.push({
     src: '/images/05-backpack-cat.jpg',
-    name: 'Cozmo'
+    name: 'Cozmo',
+    id: 5
   })
   imageList.push({
     src: '/images/06-long-haired-chihuahua.jpg',
-    name: 'Shredder'
+    name: 'Shredder',
+    id: 6
   })
   imageList.push({
     src: '/images/07-smiley-cat.jpg',
-    name: 'Frank'
+    name: 'Frank',
+    id: 7
   })
   imageList.push({
     src: '/images/08-expressive-pug.jpg',
-    name: 'Snickers'
+    name: 'Snickers',
+    id: 8
   })
   imageList.push({
     src: '/images/09-side-eye-frenchie.jpg',
-    name: 'Violette'
+    name: 'Violette',
+    id: 9
   })
   imageList.push({
     src: '/images/10-running-weimaraner.jpg',
-    name: 'Charlotte'
+    name: 'Charlotte',
+    id: 10
   });
 
   res.render("login", { imageList });
@@ -77,6 +88,18 @@ router.get("/", async (req, res) => {
     const posts = postData.map((post) => post.get({ plain: true }));
 
     res.render("all-posts", { posts });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+//get single pet
+router.get("/pet/:id", async (req, res) => {
+  try {
+    const petData = await Pet.findByPk(req.params.id);
+    const pet = petData.get({ plain: true });
+
+    res.render("pet", { pet });
   } catch (err) {
     res.status(500).json(err);
   }
